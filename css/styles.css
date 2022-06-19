@@ -796,34 +796,6 @@ color: var(--main-color);
 
 
 
-
-
-
-
-/* .signup {
-    margin-left: 93px;
-}
-
-.signup-title {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    color: var(--focus-color); 
-}
-
-.singup-input {
-        background-color: transparent;
-    border: 1px solid var(--icons-color);
-    border-radius: 4px;
-    margin-bottom: 30px;
-    padding-left: 40px;
-    
-    color: var(--main-color);
-} */
- 
-
-
-
 /*------Модальне--вікно-------------------------*/
 .backdrop {
     width: 100%;
@@ -833,9 +805,6 @@ color: var(--main-color);
     top: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
-    /* transition-property: background-color; */
-    /* transition-duration: 2500ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .backdrop.is-hidden .modal {
@@ -865,9 +834,14 @@ transform: translate(0) scale(0) rotate(180deg);
     right: 8px;
 
     display: flex;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
+
+.modal-close-btn:hover, 
+.modal-close-btn:focus {
+    fill: var(--accent-color);
+   }
 
 .modal-title {
     font-family: 'Roboto';
@@ -899,6 +873,7 @@ transform: translate(0) scale(0) rotate(180deg);
     padding-left: 40px;
     color: var(--main-color);
     cursor: pointer;
+    outline: none;
 }
 
 .modal-input:hover, .modal-input:focus {
@@ -914,10 +889,47 @@ border-color: var(--accent-color);
     font-size: 12px;  
 }
 
+.modal-input:hover + .modal-icon, 
+.modal-input:focus + .modal-icon {
+    /* background-color: var(--focus-color);
+    color: var(--accent-color); */
+    fill: var(--accent-color);
+    transition: opacity 350ms cubic-bezier(0.4, 0, 0.2, 1), visibility 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .input-wrap:hover {
+fill: var(--accent-color)
+border-color: var(--accent-color);
+} */
+
+.modal-input {
+    outline: none;
+    color: var(--accent-color);
+}
+
+
 .modal-label {
     font-size: 12px; 
     display: block;
 }
+
+.modal-text:hover, .modal-text:focus {
+    background-color: var(--focus-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+    
+    .modal-text:not(:placeholder-shown) {
+        border-color: var(--accent-color);
+    }
+    
+    .modal-text::placeholder {
+        color: var(--icons-color);
+        font-size: 12px;  
+    }
+    
+   
 
 .modal-text {
     width: 100%;
@@ -930,6 +942,7 @@ border-color: var(--accent-color);
     font-size: 14px;
     padding: 12px 16px;
     cursor: pointer;
+    outline: none;
 }
 
 .modal-field {
