@@ -911,6 +911,7 @@ border-color: var(--accent-color);
 .modal-label {
     font-size: 12px; 
     display: block;
+    margin-bottom: 4px;
 }
 
 .modal-text:hover, .modal-text:focus {
@@ -973,6 +974,7 @@ border-color: var(--accent-color);
     color: var(--main-color);
     font-size: 14px;
     display: flex;
+    
 }
 
 .checkbox-label::before {
@@ -980,6 +982,7 @@ border-color: var(--accent-color);
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-color);
+    margin-right: 7px;
     transition-property: color, background-color, fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1003,8 +1006,9 @@ border-color: var(--accent-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 50px;
+    padding: 10px 55px;
+    /* width: 200px;
+    height: 50px; */
     background-color: var(--accent-color);
     color: var(--focus-color);
     border-radius: 4px;
